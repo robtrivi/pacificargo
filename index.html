@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="js/main.js" defer></script>
+    <title>PacifiCargo</title>
+  </head>
+  <body>
+    <header>
+      <img src="/media/imgs/logo.jpg" alt="" />
+      <nav>
+        <ul>
+          <li><a href="#about-us">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#reviews">Opiniones</a></li>
+          <li><a href="#coverage">Cotiza</a></li>
+          <li><a href="#tracking">Rastreo</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <div id="hero-container">
+          <video autoplay muted loop>
+            <source src="media/videos/banner.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div id="hero-text">
+            <h1>PacifiCargo</h1>
+            <h2>
+              Envíos sin límites, precisos y rápidos. Tu carga, nuestra
+              prioridad.
+            </h2>
+          </div>
+        </div>
+        <div id="info-discount">
+          <p>
+            25% de descuento en la primera entrega + 10% de descuento en envíos
+          </p>
+        </div>
+      </section>
+      <section id="about-us" class="container">
+        <img
+          src="media/imgs/about-us.png"
+          alt="Imagen que representa nuestros servicios de envíos aereos, terrestres y maritimos"
+        />
+        <div>
+          <h2 class="title-section">Nosotros</h2>
+          <p>
+            Pacific cargo fue fundada en 2022 con la misión de proporcionar
+            servicios de entrega aérea rápidos y fiables desde Usa a Ecuador.
+            Nuestra visión es ser el líder en logística aérea, ofreciendo
+            soluciones innovadoras y eficientes que conecten negocios y
+            personas. Nos centramos en la puntualidad, la seguridad y la
+            innovación, asegurando que cada paquete llegue a su destino a tiempo
+            y en perfectas condiciones.
+          </p>
+        </div>
+      </section>
+      <section id="services" class="container">
+        <h2 class="title-section align-center">Servicios</h2>
+        <div id="services-list">
+          <div class="service">
+            <img id="img-aereo"
+              src="media/imgs/aereo.png"
+              alt="Avion que representa servicio aereo"
+            />
+            <h3>Vía aérea</h3>
+            <p>Para envíos urgentes que requieren la máxima rapidez.</p>
+          </div>
+          <div class="service">
+            <img id="img-terrestre" src="media/imgs/terrestre.png" alt="" />
+            <h3>Vía Terrestre</h3>
+            <p>Perfecto para entregas que combinan eficiencia y economía.</p>
+          </div>
+          <div class="service">
+            <img id="img-maritimo"
+            src="media/imgs/maritimo.png" alt="" />
+            <h3>Vía Marítima</h3>
+            <p>Ideal para grandes volúmenes a un costo más económico.</p>
+          </div>
+        </div>
+      </section>
+      <section id="reviews" class="container">
+        <h2 class="title-section align-center">Opiniones</h2>
+        <div id="list-reviews">
+          <div class="review">
+            <img src="media/imgs/persona-1.jpg" alt="" />
+            <p class="name-reviewer">Juan Carlos</p>
+            <div class="stars">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bx-star'></i>
+            </div>
+            <p class="text-review">
+              Desde que descubrí Pacific Cargo, he estado impresionado con su servicio excepcional de entrega aérea desde Estados Unidos a Ecuador. Su compromiso con la puntualidad y la seguridad es evidente en cada envío que he realizado con ellos.
+            </p>
+          </div>
+          <div class="review">
+            <img src="media/imgs/persona-3.jpg" alt="" />
+            <p class="name-reviewer">Marcos Duarte</p>
+            <div class="stars">
+              <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star'></i>
+            </div>
+            <p class="text-review">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda adipisci tempore reiciendis non quo deleniti impedit esse doloremque praesentium qui.
+            </p>
+          </div>
+          <div class="review">
+            <img src="media/imgs/persona-2.jpg" alt="" />
+            <p class="name-reviewer">Milena Teran</p>
+            <div class="stars">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bx-star'></i>
+              <i class='bx bx-star'></i>
+            </div>
+            <p class="text-review">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, maiores amet sint iste dolor aliquid ipsam repudiandae, magnam repellat nulla dolorem assumenda pariatur.
+            </p>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="principal-btn" onclick="changeReview(-1)"><<</button>
+          <button class="principal-btn" onclick="changeReview(1)">>></button>
+        </div>
+        
+      </section>
+      <section id="coverage" class="container">
+        <div id="info-coverage">
+          <h2 class="title-section">Cobertura</h2>
+          <p>
+            Somos una empresa ecuatoriana líder en el sector de transporte de
+            carga. Se especializa en servicios de logística integral,
+            distribución y despacho aduanero, tanto a nivel nacional como
+            internacional.
+          </p>
+        </div>
+        <div id="price">
+          <p>Usa nuestra herramienta para calcular el valor de tu carga.</p>
+          <form action="" id="quote-form">
+            <ul>
+              <li>
+                <label for="origin">Origen:</label>
+                <select id="origin">
+                  <!-- Las opciones se cargarán dinámicamente desde JavaScript -->
+                </select>
+              </li>
+              <li>
+                <label for="destination">Destino:</label>
+                <select id="destination">
+                  <!-- Las opciones se cargarán dinámicamente desde JavaScript -->
+                </select>
+              </li>
+              <li class="full-width">
+                <label for="aprox-weight">Peso aproximado: </label
+                ><input id="aprox-weight" type="text" />
+              </li>
+              <button
+                type="button"
+                class="full-width secundary-btn"
+                id="calculate"
+              >
+                Calcular
+              </button>
+            </ul>
+          </form>
+          <p id="valor-final" style="display: none">
+            <strong>Valor final: $<span id="resultado"></span></strong>
+          </p>
+        </div>
+      </section>
+      <section id="tracking" class="container">
+        <h2 class="title-section">Rastreo</h2>
+        <div class="input-wrapper">
+          <input
+            id="code-tracking"
+            type="text"
+            placeholder="Código del paquete"
+          />
+          <button id="search-button" class="principal-btn" type="button">
+            <i class="bx bx-search"></i>
+          </button>
+        </div>
+        <p>
+          Esta opción le permite saber la localización en tiempo real de su
+          paquete.
+        </p>
+
+        <div id="package-info" class="package-info" style="display: none">
+          <h3>Información del Paquete</h3>
+          <div id="text-package">
+            <p><strong>Enviado por:</strong></p>
+            <p id="sender"></p>
+            <p><strong>Recibido por: </strong></p>
+            <p id="receiver"></p>
+            <p><strong>Fecha llegada:</strong></p>
+            <p id="delivery-date"></p>
+            <p><strong>Ubicación actual:</strong></p>
+          </div>
+          <iframe
+            class="full-width"
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57456.11956296841!2d-80.34935839175085!3d25.836299069490355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMiami%206985nd%20Ave.%20Fl%2C%20Miami%2C%20Florida%2033166.!5e0!3m2!1ses!2sec!4v1719598414889!5m2!1ses!2sec"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+    <div id="bnt-whatsapp" href="">
+      <i class="bx bxl-whatsapp"></i>
+      <p>ATENCIÓN<br />PERSONALIZADA</p>
+    </div>
+    <footer class="container">
+      <div id="contact-us">
+        <h2 class="title-section full-width">Contáctanos</h2>
+        <p class="type-contact">Teléfono:</p>
+        <p class="value-contact">+1 (786) 878 - 8388</p>
+        <p class="type-contact">Correo:</p>
+        <p class="value-contact">operaciones@pacificcargoecuador.com</p>
+        <p class="type-contact">Instagram:</p>
+        <p class="value-contact">@pacificargo</p>
+        <p class="type-contact">Dirección:</p>
+        <p class="value-contact">Miami 6985nd Av. Fl, Miami, Florida 33166.</p>
+        <iframe
+          class="full-width"
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57456.11956296841!2d-80.34935839175085!3d25.836299069490355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sMiami%206985nd%20Ave.%20Fl%2C%20Miami%2C%20Florida%2033166.!5e0!3m2!1ses!2sec!4v1719598414889!5m2!1ses!2sec"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div id="submenu">
+        <ul>
+          <li><a href="#about-us">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#reviews">Opiniones</a></li>
+          <li><a href="#coverage">Cotiza</a></li>
+          <li><a href="#tracking">Rastreo</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
