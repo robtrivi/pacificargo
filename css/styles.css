@@ -1,7 +1,9 @@
 /* Variables */
 :root {
     --principal-color: #3d255b;
+    --principal-color-08: #5a3e7c;
     --secundary-color: #fb9c3c;
+    --secundary-color-08: #feaf61;
     --principal-font: "Raleway", sans-serif;
     --white: #fff;
     --gray: #cccccc;
@@ -20,7 +22,7 @@
 }
 
 .secundary-btn:hover {
-    background-color: var(--principal-color);
+    background-color: var(--principal-color-08);
 }
 
 .secundary-btn:focus {
@@ -38,7 +40,7 @@
 }
 
 .principal-btn:hover {
-    background-color: var(--principal-color);
+    background-color: var(--secundary-color-08);
 }
 
 .principal-btn:focus {
@@ -260,6 +262,18 @@ ul a:active{
     align-items: center;
 }
 
+
+#text-about-us{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#text-about-us button{
+    padding: 10px 50px;
+    max-width: 600px;
+    margin: auto;
+}
+
 #about-us img{
     max-width: 450px;
     min-width: 100%;
@@ -372,6 +386,7 @@ ul a:active{
 
 .text-review{
     max-width: 80%;
+    min-height: 180px;
 }
 
 

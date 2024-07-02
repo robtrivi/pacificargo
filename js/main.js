@@ -24,11 +24,28 @@ function llenarSelectores() {
         optionDestino.textContent = coordenadas[ciudad].nombre; // Usar el nombre de la ciudad
         selectDestino.appendChild(optionDestino);
     }
-    
+
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     llenarSelectores();
+
+    let reviews = document.querySelectorAll('.review');
+
+    // Calculamos la altura máxima de todas las opiniones
+    let maxHeight = 0;
+    reviews.forEach(review => {
+        const reviewHeight = review.querySelector('.text-review').scrollHeight;
+        if (reviewHeight > maxHeight) {
+            maxHeight = reviewHeight;
+        }
+    });
+
+    // Aplicamos la altura máxima a todos los contenedores de opinión
+    reviews.forEach(review => {
+        review.style.minheight = `${maxHeight}px`;
+    });
+
 });
 
 document.getElementById('search-button').addEventListener('click', function () {
@@ -80,23 +97,23 @@ function calcularEnvio() {
     }
 }
 
-document.getElementById("calculate").addEventListener("click", function (){
+document.getElementById("calculate").addEventListener("click", function () {
     calcularEnvio();
 });
 
-document.addEventListener("scroll", function() {
+document.addEventListener("scroll", function () {
     const servicesSection = document.getElementById("services-list");
     const servicesSectionTop = servicesSection.offsetTop;
     const servicesSectionHeight = servicesSection.offsetHeight;
     const windowHeight = window.innerHeight;
     const scrollPosition = window.scrollY;
-  
+
     const servicesItems = servicesSection.querySelectorAll(".service");
-  
+
     const activatePositionAereo = document.getElementById("img-aereo").offsetTop + document.getElementById("img-aereo").offsetHeight * 0.2;
     const activatePositionMaritimo = document.getElementById("img-maritimo").offsetTop + document.getElementById("img-maritimo").offsetHeight * 0.2;
     const activatePositionTerrestre = document.getElementById("img-terrestre").offsetTop + document.getElementById("img-terrestre").offsetHeight * 0.2;
-  
+
     // Determina si el usuario ha pasado la posición de activación para cada imagen
     if (scrollPosition > activatePositionAereo) {
         document.getElementById("img-aereo").classList.add("move-left");
@@ -105,7 +122,7 @@ document.addEventListener("scroll", function() {
         document.getElementById("img-aereo").classList.remove("move-left");
         document.getElementById("img-aereo").classList.remove("scale");
     }
-  
+
     if (scrollPosition > activatePositionMaritimo) {
         document.getElementById("img-maritimo").classList.add("move-right");
         document.getElementById("img-maritimo").classList.add("scale");
@@ -113,7 +130,7 @@ document.addEventListener("scroll", function() {
         document.getElementById("img-maritimo").classList.remove("move-right");
         document.getElementById("img-maritimo").classList.remove("scale");
     }
-  
+
     if (scrollPosition > activatePositionTerrestre) {
         document.getElementById("img-terrestre").classList.add("scale");
     } else {
@@ -121,23 +138,23 @@ document.addEventListener("scroll", function() {
     }
 });
 
-let currentReview = 0;
-const reviews = document.querySelectorAll('.review');
+let currentReview = 1;
+    let reviews = document.querySelectorAll('.review')
 
-function showReview(index) {
-  reviews.forEach((review) => review.classList.remove('active'));
-  reviews[index].classList.add('active');
-}
+    function showReview(index) {
+        reviews.forEach((review) => review.classList.remove('active'));
+        reviews[index].classList.add('active');
+    }
 
-function changeReview(direction) {
-  currentReview += direction;
-  if (currentReview < 0) {
-    currentReview = reviews.length - 1;
-  } else if (currentReview >= reviews.length) {
-    currentReview = 0;
-  }
-  showReview(currentReview);
-}
+    function changeReview(direction) {
+        currentReview += direction;
+        if (currentReview < 0) {
+            currentReview = reviews.length - 1;
+        } else if (currentReview >= reviews.length) {
+            currentReview = 0;
+        }
+        showReview(currentReview);
+    }
 
-// Mostrar la primera opinión al cargar la página
-showReview(currentReview);
+    // Mostrar la primera opinión al cargar la página
+    showReview(currentReview);
