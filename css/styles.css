@@ -47,6 +47,27 @@
     outline: none;
 }
 
+.action-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
+    cursor: pointer;
+    /* transition: background-color 0.5s ease; */
+    transition: color 0.2s ease;
+}
+
+.action-btn:hover {
+    background-color: white;
+    color: var(--principal-color);
+}
+
+.action-btn:focus {
+    outline: none;
+}
+
+
 
 input,select {
     outline: none;
@@ -386,7 +407,6 @@ ul a:active{
 
 .text-review{
     max-width: 80%;
-    min-height: 180px;
 }
 
 

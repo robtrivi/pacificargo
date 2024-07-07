@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
             maxHeight = reviewHeight;
         }
     });
-
     // Aplicamos la altura máxima a todos los contenedores de opinión
     reviews.forEach(review => {
-        review.style.minheight = `${maxHeight}px`;
+        review.style.minHeight = `${maxHeight}px`;
+        console.log(maxHeight,review.style.minHeight)
     });
 
 });
