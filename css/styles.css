@@ -162,6 +162,8 @@ nav ul {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    display: flex;
+            align-items: center;
 }
 
 ul a {
